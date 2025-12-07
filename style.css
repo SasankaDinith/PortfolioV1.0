@@ -720,7 +720,7 @@ body {
 }
 
 /* --- Small Mobile (max-width: 480px) --- */
-@media (max-width: 480px) {
+@media (max-width: 480px, 380px) {
   .about-section {
     padding: 40px 15px;
   }
@@ -748,6 +748,7 @@ body {
   .vision, .mission {
     padding: 10px;
     margin-bottom: -15px;
+ 
   }
 
   .portfolio-link a {
@@ -756,11 +757,11 @@ body {
   }
 
    .vision h4 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .mission h4 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
 }
@@ -1346,19 +1347,23 @@ body {
 
 
 
-@media (max-width: 576px) {
+@media (max-width: 576px, 375px) {
 
     #sss{
       font-size: 5rem;
+    
     }
+  
 
     .portfolio-box h3 {
         font-size: 2.1rem;
+        text-align: left;
     }
 
     .portfolio-box p {
         font-size: 1.2rem;
         padding-inline: 0.5rem;
+        text-align: left;
     }
 
     .tech-item {
@@ -1434,6 +1439,7 @@ body {
     .portfolio-container {
         grid-template-columns: 1fr;
         gap: 6rem;
+
     }
 
     #sss{
@@ -1441,7 +1447,7 @@ body {
     }
 
     .portfolio-box {
-        text-align: center;
+        text-align: left;
     }
 
     .portfolio-box h3 {
@@ -1454,11 +1460,11 @@ body {
     }
 
     .technologies-section {
-        text-align: center;
+        text-align: left;
     }
 
     .tech-list {
-        justify-content: center;
+        justify-content: left;
     }
 
     .portfolio-carousel {
@@ -1666,6 +1672,8 @@ body {
     gap: 3rem;
   }
 
+  
+
   .contact-box h2 {
     font-size: 5rem;
     text-align: center;
@@ -1690,15 +1698,22 @@ body {
   .contact-container {
     grid-template-columns: 1fr;
     gap: 3rem;
+       flex: 1 1 100%;   
+    min-width: 100%; 
+    padding: 16px;    
   }
+
 
   .contact-box,
   .contact-box2 form {
     padding: 2rem;
+       flex: 1 1 100%;   
+    min-width: 100%; 
+    padding: 16px;    
   }
 
   .contact-box h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .contact-box2 .heading {
@@ -1732,11 +1747,18 @@ body {
   }
 }
 
+
+
 /* Small Mobile */
 @media (max-width: 480px) {
 
   .contact-box {
     padding: 1.5rem;
+  }
+
+  .contact-container .connect-card .work-card{
+     grid-template-columns: 1fr;
+      flex-direction: column;
   }
 
   .contact-box2 form {
@@ -1748,11 +1770,11 @@ body {
   }
 
   .contact-box p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 
   .contact-box2 .heading {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .social-grid {
@@ -2236,6 +2258,11 @@ body {
     font-size: 2.0rem;
   }
 
+   .blogs .section-title{
+  
+    font-size: clamp(1.5rem, 6vw, 2.75rem);
+  }
+
   .section-title {
     font-size: 2.4rem;
   }
@@ -2247,10 +2274,13 @@ body {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .blog-intro {
-    font-size: 2.0rem;
-  }
 
+  .blog-intro {
+    font-size: 1.8rem;
+  }
+   .blogs .section-title{
+      font-size: clamp(1.5rem, 6vw, 2.75rem);
+  }
   .section-title {
     font-size: 2rem;
   }
@@ -2259,36 +2289,41 @@ body {
     max-width: 330px;
   }
 
-  .blog-title {
-    font-size: 1.25rem;
+  .blog-card h3{
+    font-size: 1.6rem;
   }
 
+
   .read-more {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     padding: 10px 20px;
   }
 }
 
 /* Small Mobile */
 @media (max-width: 480px) {
+ 
   .blogs {
     padding: 40px 5%;
   }
 
+  .blogs .section-title{
+      font-size: clamp(1.5rem, 6vw, 2.75rem);
+  }
    .blog-intro {
-    font-size: 2.0rem;
+    font-size: 1.8rem;
   }
 
   .blog-container {
-    gap: 25px;
+    gap: 30px;
   }
 
   .blog-card {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .blog-image {
-    height: 180px;
+    height: 260px;
   }
 
   .blog-title {
@@ -2300,6 +2335,31 @@ body {
 
 
 
+@media (max-width: 480px) {
+  .connect-card,
+  .work-card {
+    flex: 1 1 100%;   
+    min-width: 100%; 
+    padding: 16px;    
+  }
+
+
+  .cards-wrapper {    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;       
+  }
+
+
+  .social-links,
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+
+
 
 
 
@@ -2307,10 +2367,13 @@ body {
   background: var(--seconf-color);
   border-radius: 12px;
   padding: 20px;
-  
-  flex: 1;
-  min-width: 450px;
+
+
+  flex: 1 1 320px;  
+  min-width: 0;    
+  box-sizing: border-box;
 }
+
 
 .work-card:hover{
         box-shadow: 0 0 22px  var(--main-color);
