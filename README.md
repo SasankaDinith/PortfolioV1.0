@@ -34,8 +34,9 @@ This portfolio website is designed to highlight my expertise in cloud infrastruc
 ## 📬 Contact
 Feel free to reach out for collaboration or inquiries:
 - **Email:** sasankaranawaka0@gmail.com
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/sasankad101)
+- **LinkedIn:** [https://www.linkedin.com/in/sasankad101](https://www.linkedin.com/in/sasankad101)
 
 ---
 Thank you for visiting my portfolio!
+
 
